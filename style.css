@@ -102,3 +102,61 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+/* Image and Banner Styling */
+.nav-logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 50%; /* Arredonda a logo se ela tiver fundo quadrado */
+}
+
+.hero-banner {
+    /* Usa a planta_0.jpg com uma camada verde escura por cima para dar contraste */
+    background-image: linear-gradient(rgba(44, 76, 59, 0.85), rgba(44, 76, 59, 0.85)), url('images/planta_0.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px 60px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.hero-banner h1, .hero-banner p {
+    color: white;
+}
+
+.parallax-banner {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 250px;
+    width: 100%;
+}
+
+.banner-1 {
+    background-image: url('images/planta_1.jpg');
+}
+
+.banner-2 {
+    /* Lembre-se de renomear o arquivo para minúsculo no seu PC */
+    background-image: url('images/planta_2.jpg');
+}
+
+.pipeline-img {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--terracotta);
+}
+
