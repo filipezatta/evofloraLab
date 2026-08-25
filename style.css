@@ -87,13 +87,39 @@ h2 {
     gap: 20px;
 }
 
+/* Atualize a classe .card existente */
 .card {
     background: white;
     border-left: 4px solid var(--slate-gray);
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* Adicione estas linhas para a transição: */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Adicione o estado :hover para o card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Atualize a classe .pipeline-img existente */
+.pipeline-img {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    /* Adicione estas linhas para a transição: */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adicione o estado :hover para o pipeline */
+.pipeline-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
 /* Footer */
 footer {
     background-color: var(--forest-green);
@@ -164,3 +190,4 @@ img {
     max-width: 100%;
     height: auto;
 }
+
