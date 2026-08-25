@@ -1,0 +1,104 @@
+/* Color Palette */
+:root {
+    --forest-green: #2C4C3B;
+    --terracotta: #C0583F;
+    --slate-gray: #5B6C70;
+    --bg-light: #F9F9F7;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--forest-green);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--terracotta);
+}
+
+/* Sections */
+section {
+    padding: 80px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--forest-green);
+}
+
+h2 {
+    border-bottom: 2px solid var(--terracotta);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.highlight-text {
+    color: var(--terracotta);
+    font-weight: bold;
+}
+
+/* People & Projects Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-left: 4px solid var(--slate-gray);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--forest-green);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
