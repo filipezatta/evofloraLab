@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thode Lab | UFRGS</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --forest-green: #2C4C3B;
+            --terracotta: #C0583F;
+            --slate-gray: #5B6C70;
+            --bg-light: #F9F9F7;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--forest-green);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--terracotta);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: var(--forest-green);
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--terracotta);
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        .highlight-text {
+            color: var(--terracotta);
+            font-weight: bold;
+        }
+
+        /* People & Projects Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-left: 4px solid var(--slate-gray);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--forest-green);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">THODE LAB</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#people">People</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Evolution and biodiversity of Neotropical flora</h1>
+        <p><strong>Welcome to the Thode Lab.</strong> We combine molecular phylogenomics, bioinformatics, taxonomy, and historical biogeography to understand how plants diversify across time and space.</p>
+        
+        <h2>Aim & Long-term Goal</h2>
+        <p>Research in our laboratory focuses on understanding the evolutionary history of Neotropical plant lineages, using <span class="highlight-text">Verbenaceae (Lamiales)</span> as a primary study system. Our long-term goal is to build a comprehensive evolutionary and biogeographic framework, bridging taxonomy, genomics, and conservation biology.</p>
+
+        <h2>Research Approach</h2>
+        <ul>
+            <li><strong>Molecular phylogenetics and phylogenomics:</strong> High-throughput sequencing approaches to generate nuclear and plastid datasets.</li>
+            <li><strong>Historical biogeography:</strong> Tracing the geographic pathways of Verbenaceae across the Americas.</li>
+            <li><strong>Diversification:</strong> Investigating the role of climate, habitat heterogeneity, and morphological traits.</li>
+            <li><strong>Taxonomy:</strong> Producing taxonomic monographs, identification keys, and species descriptions.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Our research uses Verbenaceae as a primary model system to investigate how biotic and abiotic factors have shaped the diversification of Neotropical plant lineages.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Verbenaceae Phylogenomics and Systematics</h3>
+                <p>Constructing a robust nuclear phylogenomic backbone using target enrichment data and revising infrafamilial tribal classifications.</p>
+            </div>
+            <div class="card">
+                <h3>Spatio-temporal Evolution and Diversification</h3>
+                <p>Estimating divergence times and reconstructing historical biogeography to test the hypothesis of a South American origin for the family.</p>
+            </div>
+            <div class="card">
+                <h3>Taxonomy and Biodiversity Conservation</h3>
+                <p>Conducting taxonomic revisions, species delimitations, and generating preliminary conservation assessments following IUCN criteria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="people">
+        <h2>People</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: var(--terracotta);">Verônica Aydos Thode, PhD</h3>
+                <p><strong>Principal Investigator</strong><br>Professor in the Department of Botany at UFRGS. Research focuses on plant systematics, taxonomy, and historical biogeography of Verbenaceae.</p>
+            </div>
+            <div class="card">
+                <h3>Graduate Students</h3>
+                <p><strong>Laura Luz Nunes:</strong> Taxonomic revision and conservation of Glechon Spreng.</p>
+            </div>
+            <div class="card">
+                <h3>Undergraduate Students</h3>
+                <ul>
+                    <li><strong>Filipe Backes Zatta:</strong> Verbena phylogenomics and historical biogeography.</li>
+                    <li><strong>Sol da Prá:</strong> Verbenaceae phylogenomics: implications on the classification of the Tribe Verbenaeae.</li>
+                    <li><strong>Italo Angelo Sguaisser Rech:</strong> Data mining - using available DNA sequences for phylogenomic studies.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li style="margin-bottom: 15px;"><strong>2026</strong> - Giacomin, L. et al. <em>The rediscovery of Glechon hoehneana (Lamiaceae), a threatened species of the Brazilian Atlantic Forest...</em> Phytotaxa 755: 282-292.</li>
+            <li style="margin-bottom: 15px;"><strong>2025</strong> - Beyer, M., Thode, V.A., & Lohmann, L.G. <em>Phylogeny and Biogeography of Stizophyllum (Bignonieae, Bignoniaceae).</em> Systematic Botany.</li>
+            <li style="margin-bottom: 15px;"><strong>2023</strong> - O’Leary, N., Thode, V.A., & Olmstead, R.G. <em>Making Lantaneae (Verbenaceae) taxonomy useful: a phylogenetic classification.</em> Taxon: 1-18.</li>
+        </ul>
+        <p><a href="https://scholar.google.com.br/citations?user=CIH_XLQAAAAJ&hl=en" target="_blank" style="color: var(--terracotta);">View full list on Google Scholar &rarr;</a></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>We welcome graduate students, postdoctoral researchers, and collaborators interested in plant systematics, phylogenomics, historical biogeography, and Neotropical plant diversity.</p>
+        <p>
+            <strong>Verônica Aydos Thode, PhD</strong><br>
+            Av. Bento Gonçalves, 9500 – Prédio 43432, sala 224<br>
+            Programa de Pós-Graduação em Botânica – UFRGS<br>
+            Email: veronica.thode@ufrgs.br
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Thode Lab | Universidade Federal do Rio Grande do Sul</p>
+    </footer>
+
+</body>
+</html>
