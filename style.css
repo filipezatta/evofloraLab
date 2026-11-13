@@ -1,11 +1,19 @@
-/* Color Palette */
+/* ===== EVOFLORA — paleta terrosa (verde-floresta, terracota, cinza-ardósia) ===== */
 :root {
     --forest-green: #2C4C3B;
+    --forest-dark: #1F3A2C;
     --terracotta: #C0583F;
+    --logo-red: #D32323;
     --slate-gray: #5B6C70;
     --bg-light: #F9F9F7;
+    --cream: #F3EFE6;
     --text-dark: #333333;
+    --nav-height: 76px;
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 10px); }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,141 +24,162 @@ body {
     background-color: var(--bg-light);
 }
 
-/* Navigation */
+/* ===== Idioma: mostra só o texto do idioma ativo ===== */
+body.lang-en [lang="pt"] { display: none !important; }
+body.lang-pt [lang="en"] { display: none !important; }
+
+/* ===== Navegação ===== */
 nav {
-    background-color: var(--forest-green);
-    color: white;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    height: var(--nav-height);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
+    gap: 24px;
+    padding: 0 2rem;
+    background-color: var(--cream);
+    border-bottom: 3px solid var(--forest-green);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-nav .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
 }
 
-nav ul {
+.brand-logo {
+    height: 58px;
+    width: auto;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: var(--logo-red);
+}
+
+.brand-sub {
+    font-size: 0.8rem;
+    color: var(--forest-green);
+    letter-spacing: 0.5px;
+}
+
+nav .menu {
     list-style: none;
     display: flex;
-    margin: 0;
+    flex-wrap: nowrap;
+    gap: 22px;
+    margin: 0 0 0 auto;
     padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
+nav .menu a {
+    color: var(--forest-green);
     text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: var(--terracotta);
+nav .menu a:hover { color: var(--terracotta); }
+
+.lang-switch {
+    display: flex;
+    border: 1.5px solid var(--forest-green);
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-/* Sections */
+.lang-switch button {
+    border: 0;
+    background: transparent;
+    color: var(--forest-green);
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    background: var(--forest-green);
+    color: white;
+}
+
+/* ===== Seções ===== */
 section {
-    padding: 80px 20px 40px;
+    padding: 70px 20px 40px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    color: var(--forest-green);
-}
+h1, h2, h3 { color: var(--forest-green); }
 
 h2 {
     border-bottom: 2px solid var(--terracotta);
     padding-bottom: 5px;
     margin-top: 40px;
+    letter-spacing: 0.5px;
 }
 
-.highlight-text {
-    color: var(--terracotta);
-    font-weight: bold;
+section > div > h2:first-child,
+section > h2:first-child { margin-top: 0; }
+
+.approach li { margin-bottom: 0.6em; }
+
+.funding {
+    font-size: 0.92rem;
+    color: var(--slate-gray);
+    border-left: 3px solid var(--terracotta);
+    padding-left: 12px;
 }
 
-/* People & Projects Grid */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-/* Atualize a classe .card existente */
-.card {
-    background: white;
-    border-left: 4px solid var(--slate-gray);
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    /* Adicione estas linhas para a transição: */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Adicione o estado :hover para o card */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-/* Atualize a classe .pipeline-img existente */
-.pipeline-img {
-    width: 100%;
-    max-width: 800px;
-    margin: 40px auto;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    /* Adicione estas linhas para a transição: */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Adicione o estado :hover para o pipeline */
-.pipeline-img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-/* Footer */
-footer {
-    background-color: var(--forest-green);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-/* Image and Banner Styling */
-.nav-logo {
-    height: 40px;
-    vertical-align: middle;
-    margin-right: 15px;
-    border-radius: 50%; /* Arredonda a logo se ela tiver fundo quadrado */
-}
-
+/* ===== Banner principal ===== */
 .hero-banner {
-    /* Usa a planta_0.jpg com uma camada verde escura por cima para dar contraste */
+    margin-top: var(--nav-height);
     background-image: linear-gradient(rgba(44, 76, 59, 0.85), rgba(44, 76, 59, 0.85)), url('images/planta_0.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 20px 60px;
+    padding: 90px 20px 70px;
     text-align: center;
-    max-width: 100%;
 }
 
-.hero-banner h1, .hero-banner p {
+.hero-banner h1 {
     color: white;
+    font-size: 2.3rem;
+    margin: 0 auto 10px;
+    max-width: 900px;
 }
 
+.hero-banner p {
+    color: white;
+    max-width: 760px;
+    margin: 12px auto 0;
+    font-size: 1.05rem;
+}
+
+.hero-banner .hero-group {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #F6D9CF;
+}
+
+/* ===== Banners entre seções ===== */
 .parallax-banner {
     background-size: cover;
     background-position: center;
@@ -159,31 +188,161 @@ footer {
     width: 100%;
 }
 
-.banner-1 {
-    background-image: url('images/planta_1.jpg');
+.banner-1 { background-image: url('images/planta_1.jpg'); }
+.banner-2 { background-image: url('images/planta_2.jpg'); }
+
+/* ===== Cards ===== */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.banner-2 {
-    /* Lembre-se de renomear o arquivo para minúsculo no seu PC */
-    background-image: url('images/planta_2.jpg');
+.card {
+    background: white;
+    border-left: 4px solid var(--slate-gray);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 { margin-top: 0; }
+
+/* ===== Infográfico ===== */
 .pipeline-img {
     width: 100%;
     max-width: 800px;
     margin: 40px auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pipeline-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Pessoas ===== */
+.pi-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    align-items: start;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
     border: 3px solid var(--terracotta);
+}
+
+.role {
+    color: var(--terracotta);
+    margin: 0 0 4px;
+}
+
+.person-name {
+    font-weight: 700;
+    color: var(--forest-green);
+    margin: 0 0 4px;
+}
+
+.years {
+    font-weight: 400;
+    color: var(--slate-gray);
+    font-size: 0.9rem;
+    margin-left: 6px;
+}
+
+.person + .person {
+    border-top: 1px solid #e3e3df;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.person p { margin: 0 0 4px; }
+
+/* ===== Publicações ===== */
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profile-links a,
+.link-list a {
+    color: var(--forest-green);
+    font-weight: 600;
+}
+
+.profile-links a {
+    border: 1.5px solid var(--forest-green);
+    border-radius: 999px;
+    padding: 3px 14px;
+    text-decoration: none;
+}
+
+.profile-links a:hover {
+    background: var(--forest-green);
+    color: white;
+}
+
+.pubs h3 {
+    margin: 28px 0 8px;
+    color: var(--terracotta);
+}
+
+.pubs ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.pubs li { margin-bottom: 0.6em; }
+
+/* ===== Contato ===== */
+.contact-grid { grid-template-columns: 2fr 1fr; }
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-list li { margin-bottom: 6px; }
+
+a { color: var(--terracotta); }
+
+/* ===== Rodapé ===== */
+footer {
+    background-color: var(--forest-green);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p { margin: 6px 0; }
+
+.footer-logo {
+    height: 70px;
+    width: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+footer .updated {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
 img {
@@ -191,3 +350,35 @@ img {
     height: auto;
 }
 
+/* ===== Telas menores ===== */
+@media (max-width: 960px) {
+    :root { --nav-height: 118px; }
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: var(--nav-height);
+        padding: 8px 16px;
+        gap: 8px 16px;
+    }
+    .brand-logo { height: 46px; }
+    .lang-switch { margin-left: auto; }
+    nav .menu {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        overflow-x: auto;
+        gap: 18px;
+        padding-bottom: 6px;
+    }
+}
+
+@media (max-width: 640px) {
+    section { padding: 50px 16px 30px; }
+    .hero-banner { padding: 60px 16px 50px; }
+    .hero-banner h1 { font-size: 1.7rem; }
+    .pi-card { grid-template-columns: 1fr; justify-items: center; }
+    .pi-card > div { width: 100%; }
+    .profile-pic { width: 160px; height: 160px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .parallax-banner { background-attachment: scroll; height: 180px; }
+}

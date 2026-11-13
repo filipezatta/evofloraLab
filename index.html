@@ -3,151 +3,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thode Lab | UFRGS</title>
+    <title>EVOFLORA | UFRGS</title>
+    <meta name="description" content="EVOFLORA – Research Group on Evolution, Systematics, and Biogeography of Flora (Thode Lab, UFRGS).">
+    <link rel="icon" type="image/svg+xml" href="images/evoflora_simbolo.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lang-en">
 
     <nav>
-        <div style="display: flex; align-items: center;">
-            <img src="images/logo.png" alt="Thode Lab Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain; margin-right: 15px; border-radius: 50%;">
-            <div class="logo">THODE LAB</div>
-        </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#people">People</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact/CV</a></li>
+        <a href="#home" class="brand">
+            <img src="images/evoflora_simbolo.svg" alt="EVOFLORA logo" class="brand-logo">
+            <span class="brand-text">
+                <span class="brand-name">EVOFLORA</span>
+                <span class="brand-sub">Thode Lab · UFRGS</span>
+            </span>
+        </a>
+        <ul class="menu">
+            <li><a href="#home"><span lang="en">Home</span><span lang="pt">Início</span></a></li>
+            <li><a href="#research"><span lang="en">Research</span><span lang="pt">Pesquisa</span></a></li>
+            <li><a href="#projects"><span lang="en">Projects</span><span lang="pt">Projetos</span></a></li>
+            <li><a href="#people"><span lang="en">People</span><span lang="pt">Equipe</span></a></li>
+            <li><a href="#publications"><span lang="en">Publications</span><span lang="pt">Publicações</span></a></li>
+            <li><a href="#contact"><span lang="en">Contact/CV</span><span lang="pt">Contato/CV</span></a></li>
         </ul>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+        </div>
     </nav>
 
-    <!-- Usando planta_0.jpg como banner principal -->
-    <section id="home" class="hero-banner">
-        <h1>Evolution and biodiversity of Neotropical flora</h1>
-        <p>Welcome to the Thode Lab. We combine molecular phylogenomics, bioinformatics, taxonomy, and historical biogeography to understand how plants diversify across time and space.</p>
+    <!-- HOME -->
+    <header id="home" class="hero-banner">
+        <h1 lang="en">Evolution and biodiversity of Neotropical flora</h1>
+        <h1 lang="pt">Evolução e biodiversidade da flora neotropical</h1>
+        <p class="hero-group" lang="en">EVOFLORA – Research Group on Evolution, Systematics, and Biogeography of Flora</p>
+        <p class="hero-group" lang="pt">EVOFLORA – Núcleo de Pesquisa em Evolução, Sistemática e Biogeografia da Flora</p>
+        <p lang="en">Welcome to the Thode Lab. We combine molecular phylogenomics, bioinformatics, taxonomy, and historical biogeography to understand how plants diversify across time and space.</p>
+        <p lang="pt">Bem-vindo(a) ao EVOFLORA – Núcleo de Pesquisa em Evolução, Sistemática e Biogeografia da Flora. Combinamos filogenômica molecular, bioinformática, taxonomia e biogeografia histórica para compreender como as plantas se diversificam no tempo e no espaço.</p>
+    </header>
+
+    <!-- RESEARCH -->
+    <section id="research">
+        <div lang="en">
+            <h2>AIM</h2>
+            <p>Research in our laboratory focuses on understanding the evolutionary history of Neotropical plant lineages, using Verbenaceae (Lamiales) as a primary study system. We integrate taxonomy, molecular phylogenetics, phylogenomics, and historical biogeography to investigate how plant lineages diversified across the heterogeneous landscapes of the Americas. Our work combines fieldwork, herbarium collections, and bioinformatic approaches to address fundamental questions about the origin, diversification, and classification of flowering plants, with a particular emphasis on the evolution of nuclear and chloroplast genomes and the morphological traits that define plant lineages.</p>
+
+            <h2>LONG-TERM GOAL</h2>
+            <p>Our long-term goal is to build a comprehensive evolutionary and biogeographic framework for Verbenaceae and other Neotropical plant lineages, bridging taxonomy, genomics, and conservation biology. By inferring robust phylogenetic hypotheses, reconstructing biogeographic histories, and documenting patterns of morphological evolution, we aim to understand how biotic and abiotic factors have shaped the diversification of Neotropical plant groups. Ultimately, we are committed to generating scientific knowledge that supports the biodiversity conservation and sustainable management of Neotropical flora.</p>
+
+            <h2>RESEARCH APPROACH</h2>
+            <p>Our research integrates multiple approaches to investigate plant evolution and diversification:</p>
+            <ul class="approach">
+                <li><strong>Molecular phylogenetics and phylogenomics</strong> — Robust phylogenetic hypotheses are central to all research in our laboratory. We use high-throughput sequencing approaches to generate nuclear and plastid datasets and apply bioinformatic tools for their assembly and downstream evolutionary analyses. The resulting phylogenies provide the framework for our investigations of morphological evolution, historical biogeography, diversification dynamics, and taxonomic studies in Verbenaceae and other Neotropical plant groups.</li>
+                <li><strong>Historical biogeography</strong> — We use dated molecular phylogenies combined with ancestral area reconstruction methods to trace the geographic pathways of Verbenaceae across the Americas and between continents, addressing longstanding questions about the assembly of Neotropical flora.</li>
+                <li><strong>Diversification</strong> — We investigate the role of biotic and abiotic factors — including climate, habitat heterogeneity, and morphological traits — in driving the diversification of plant lineages.</li>
+                <li><strong>Taxonomy</strong> — We conduct taxonomic studies focused on the Verbenaceae family, combining morphological analysis of herbarium specimens with fieldwork and results from molecular phylogenetic studies. These studies produce taxonomic monographs, identification keys, and species descriptions that serve as fundamental resources for biodiversity science and conservation.</li>
+            </ul>
+            <img src="images/pipeline.png" alt="Research pipeline: sampling and phylogenetic analyses, divergence times estimation, georeferencing and character selection, biogeographic and diversification analyses" class="pipeline-img">
+            <p class="funding">Work in our Lab has been supported by: the Universidade Federal do Rio Grande do Sul (UFRGS); Programa de Pós-graduação em Botânica da UFRGS; Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq); Fundação de Amparo a Pesquisa do Estado do Rio Grande do Sul (FAPERGS); Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES); and the Bentham-Moxon Trust (Royal Botanic Gardens, Kew).</p>
+        </div>
+
+        <div lang="pt">
+            <h2>OBJETIVO</h2>
+            <p>A pesquisa em nosso laboratório tem como foco a compreensão da história evolutiva das linhagens de plantas neotropicais, utilizando Verbenaceae (Lamiales) como principal sistema de estudo. Integramos taxonomia, filogenética molecular, filogenômica e biogeografia histórica para investigar como as linhagens vegetais se diversificaram ao longo das paisagens heterogêneas das Américas. Nosso trabalho combina trabalho de campo, coleções de herbário e abordagens de bioinformática para responder a questões fundamentais sobre a origem, a diversificação e a classificação das angiospermas, com ênfase particular na evolução dos genomas nuclear e plastidial e nos caracteres morfológicos que definem as linhagens vegetais.</p>
+
+            <h2>OBJETIVO DE LONGO PRAZO</h2>
+            <p>Nosso objetivo de longo prazo é construir um arcabouço evolutivo e biogeográfico abrangente para Verbenaceae e outras linhagens de plantas neotropicais, articulando taxonomia, genômica e biologia da conservação. Ao inferir hipóteses filogenéticas robustas, reconstruir histórias biogeográficas e documentar padrões de evolução morfológica, buscamos compreender como fatores bióticos e abióticos moldaram a diversificação dos grupos de plantas neotropicais. Em última instância, estamos comprometidos em gerar conhecimento científico que subsidie a conservação da biodiversidade e o manejo sustentável da flora neotropical.</p>
+
+            <h2>ABORDAGEM DE PESQUISA</h2>
+            <p>Nossa pesquisa integra múltiplas abordagens para investigar a evolução e a diversificação das plantas:</p>
+            <ul class="approach">
+                <li><strong>Filogenética molecular e filogenômica</strong> — Hipóteses filogenéticas robustas são centrais para todas as pesquisas em nosso laboratório. Utilizamos abordagens de sequenciamento de alto desempenho para gerar conjuntos de dados nucleares e plastidiais e aplicamos ferramentas de bioinformática para sua montagem e para as análises evolutivas subsequentes. As filogenias resultantes fornecem o arcabouço para nossas investigações sobre evolução morfológica, biogeografia histórica, dinâmicas de diversificação e estudos taxonômicos em Verbenaceae e outros grupos de plantas neotropicais.</li>
+                <li><strong>Biogeografia histórica</strong> — Utilizamos filogenias moleculares datadas, combinadas com métodos de reconstrução de áreas ancestrais, para traçar as rotas geográficas de Verbenaceae ao longo das Américas e entre continentes, abordando questões antigas sobre a formação da flora neotropical.</li>
+                <li><strong>Diversificação</strong> — Investigamos o papel de fatores bióticos e abióticos, incluindo clima, heterogeneidade de habitats e caracteres morfológicos, na condução da diversificação das linhagens vegetais.</li>
+                <li><strong>Taxonomia</strong> — Realizamos estudos taxonômicos focados na família Verbenaceae, combinando a análise morfológica de espécimes de herbário com trabalho de campo e resultados de estudos de filogenética molecular. Esses estudos resultam em monografias taxonômicas, chaves de identificação e descrições de espécies, que constituem recursos fundamentais para a ciência da biodiversidade e para a conservação.</li>
+            </ul>
+            <img src="images/pipeline_pt.png" alt="Fluxo de pesquisa: coleta e análises filogenéticas, datação molecular, georreferenciamento e seleção de caracteres, análises biogeográficas e de diversificação" class="pipeline-img">
+            <p class="funding">Os trabalhos em nosso laboratório têm sido apoiados pela Universidade Federal do Rio Grande do Sul (UFRGS); pelo Programa de Pós-Graduação em Botânica da UFRGS; pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq); pela Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul (FAPERGS); pela Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES); e pelo Bentham-Moxon Trust (Royal Botanic Gardens, Kew).</p>
+        </div>
     </section>
 
-    <section>
-        <h2>AIM</h2>
-        <p>Research in our laboratory focuses on understanding the evolutionary history of Neotropical plant lineages, using Verbenaceae (Lamiales) as a primary study system. We integrate taxonomy, molecular phylogenetics, phylogenomics, and historical biogeography to investigate how plant lineages diversified across the heterogeneous landscapes of the Americas. Our work combines fieldwork, herbarium collections, and bioinformatic approaches to address fundamental questions about the origin, diversification, and classification of flowering plants, with a particular emphasis on the evolution of nuclear and chloroplast genomes and the morphological traits that define plant lineages.</p>
-        <p>Our long-term goal is to build a comprehensive evolutionary and biogeographic framework for Verbenaceae and other Neotropical plant lineages, bridging taxonomy, genomics, and conservation biology. By inferring robust phylogenetic hypotheses, reconstructing biogeographic histories, and documenting patterns of morphological evolution, we aim to understand how biotic and abiotic factors have shaped the diversification of Neotropical plant groups. Ultimately, we are committed to generating scientific knowledge that supports the biodiversity conservation and sustainable management of Neotropical flora.</p>
+    <div class="parallax-banner banner-1" role="img" aria-label="Verbenaceae"></div>
 
-        <h2>RESEARCH APPROACH</h2>
-        <p>Our research integrates multiple approaches to investigate plant evolution and diversification:</p>
-        <ul>
-            <li><strong>Molecular phylogenetics and phylogenomics</strong> - Robust phylogenetic hypotheses are central to all research in our laboratory. We use high-throughput sequencing approaches to generate nuclear and plastid datasets and apply bioinformatic tools for their assembly and downstream evolutionary analyses. The resulting phylogenies provide the framework for our investigations of morphological evolution, historical biogeography, diversification dynamics, and taxonomic studies in Verbenaceae and other Neotropical plant groups</li>
-            <li><strong>Historical biogeography</strong> - We use dated molecular phylogenies combined with ancestral area reconstruction methods to trace the geographic pathways of Verbenaceae across the Americas and between continents, addressing longstanding questions about the assembly of Neotropical flora.</li>
-            <li><strong>Diversification</strong> - We investigate the role of biotic and abiotic factors - including climate, habitat heterogeneity, and morphological traits in driving the diversification of plant lineages.</li>
-            <li><strong>Taxonomy</strong> - We conduct taxonomic studies focused on the Verbenaceae family, combining morphological analysis of herbarium specimens with fieldwork and results from molecular phylogenetic studies. These studies produce taxonomic monographs, identification keys, and species descriptions that serve as fundamental resources for biodiversity science and conservation.</li>
-        </ul>
-        
-        <!-- Inserindo o infográfico do pipeline -->
-        <img src="images/pipeline.png" alt="Research Pipeline" class="pipeline-img" style="height: 400px; width: auto; max-width: 100%; object-fit: contain; margin-right: 15px;">
-
-        <p>Work in our Lab has been supported by: the Universidade Federal do Rio Grande do Sul (UFRGS); Programa de Pós-graduação em Botânica da UFRGS; Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq); Fundação de Amparo a Pesquisa do Estado do Rio Grande do Sul (FAPERGS); Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES); and the Bentham-Moxon Trust (Royal Botanic Gardens, Kew).</p>
-    </section>
-
-    <!-- Banner separador 1 -->
-    <div class="parallax-banner banner-1"></div>
-
+    <!-- PROJECTS -->
     <section id="projects">
-        <h2>PROJECTS</h2>
-        <p>Understanding the processes that shape species diversification is one of the central questions in evolutionary biology. Phylogenetic studies combined with genomic, morphological, ecological, and geographic data can test macroevolutionary hypotheses, providing essential information for biodiversity conservation. High-throughput DNA sequencing (HTS) technologies offer great potential for evolutionary studies, allowing efficient sequencing of thousands of base pairs and increasing our ability to answer fundamental questions about biodiversity. Our research uses Verbenaceae (Lamiales) as a primary model system to investigate how biotic and abiotic factors have shaped the diversification of Neotropical plant lineages, combining nuclear phylogenomics, historical biogeography, diversification analyses, and integrative taxonomy.</p>
-        
-        <h3>WHY VERBENACEAE?</h3>
-        <p>Verbenaceae (Lamiales) comprises 34 genera and approximately 800 species, mainly distributed in the New World, with a few representatives in Africa and along the Indian Ocean Rim. The family includes economically important species used for seasonings, ornamentals, pharmaceuticals, teas, and cosmetics, and occupies a remarkable diversity of habitats. Verbenaceae occupies distinct ecoregions across the Neotropics, from xeric shrublands and cloud forests to wet Neotropical forests, making it an outstanding model for studying biogeographic patterns and the role of biotic and abiotic factors in plant diversification. Despite its ecological and economic relevance, Verbenaceae remains severely underrepresented in genomic studies, and a large number of taxonomic questions remain unresolved in the light of nuclear genomic data.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <h3>Verbenaceae Phylogenomics and Systematics</h3>
-                <p>With the advance of high-throughput sequencing approaches, revisiting the relationships within the family using nuclear markers has become essential for a better understanding of its evolution, classification, and conservation.</p>
-                <p><strong>Main objectives:</strong></p>
-                <ul>
-                    <li>Construct a robust nuclear phylogenomic backbone for Verbenaceae using target enrichment data (Angiosperms353 probe set) with comprehensive tribal and generic sampling</li>
-                    <li>Revise the infrafamilial tribal classification of Verbenaceae to accommodate findings based on nuclear phylogenies</li>
-                    <li>Perform taxonomic revisions within tribes and genera to resolve relationships that remain ambiguous under plastid-based topologies</li>
-                    <li>Investigate cytonuclear discordance and its implications for the evolutionary history of the family</li>
-                </ul>
-            </div>
+        <div lang="en">
+            <h2>PROJECTS</h2>
+            <p>Understanding the processes that shape species diversification is one of the central questions in evolutionary biology. Phylogenetic studies combined with genomic, morphological, ecological, and geographic data can test macroevolutionary hypotheses, providing essential information for biodiversity conservation. High-throughput DNA sequencing (HTS) technologies offer great potential for evolutionary studies, allowing efficient sequencing of thousands of base pairs and increasing our ability to answer fundamental questions about biodiversity. Our research uses Verbenaceae (Lamiales) as a primary model system to investigate how biotic and abiotic factors have shaped the diversification of Neotropical plant lineages, combining nuclear phylogenomics, historical biogeography, diversification analyses, and integrative taxonomy.</p>
 
-            <div class="card">
-                <h3>Spatio-temporal Evolution and Diversification</h3>
-                <p>Little is known about the spatio-temporal evolution of Verbenaceae. Previous biogeographic work has suggested a South American origin for the family and its major clades, but these hypotheses have not been tested with model-based ancestral area reconstruction approaches or with well-resolved, dated phylogenies. The drivers of diversification across the family's lineages including the influence of morphological traits, climatic events, and geographic distribution also remain largely unexplored.</p>
-                <p><strong>Main objectives:</strong></p>
-                <ul>
-                    <li>Estimate divergence times within Verbenaceae for the first time using molecular dating methods</li>
-                    <li>Reconstruct the historical biogeography of the family using model-based ancestral area reconstruction with operationally defined areas across the Neotropics and beyond</li>
-                    <li>Test the hypothesis of a South American origin for the family and its major clades</li>
-                    <li>Perform diversification analyses to identify shifts in speciation and extinction rates across lineages</li>
-                    <li>Investigate the influence of morphological characters, climatic events, and geographic barriers on diversification dynamics within the family</li>
-                </ul>
-            </div>
+            <h3>WHY VERBENACEAE?</h3>
+            <p>Verbenaceae (Lamiales) comprises 34 genera and approximately 800 species, mainly distributed in the New World, with a few representatives in Africa and along the Indian Ocean Rim. The family includes economically important species used for seasonings, ornamentals, pharmaceuticals, teas, and cosmetics, and occupies a remarkable diversity of habitats.</p>
+            <p>Verbenaceae occupies distinct ecoregions across the Neotropics, from xeric shrublands and cloud forests to wet Neotropical forests, making it an outstanding model for studying biogeographic patterns and the role of biotic and abiotic factors in plant diversification. Despite its ecological and economic relevance, Verbenaceae remains severely underrepresented in genomic studies, and a large number of taxonomic questions remain unresolved in the light of nuclear genomic data.</p>
 
-            <div class="card">
-                <h3>Taxonomy and Biodiversity Conservation</h3>
-                <p>Taxonomy is the science that recognizes and delimits species, and it is indispensable for any biological study scientific names are the entry point to accumulated knowledge about organisms, their ecology, distribution, and conservation status. Taxonomic revisions update our understanding of species boundaries through a thorough review of all available evidence, proposing new classifications and accommodating new findings generated by molecular and morphological studies. Conservation of species and taxonomy are deeply interconnected: it is necessary to know and recognize a species before it can be protected.</p>
-                <p>Verbenaceae includes numerous species with restricted distributions and high potential for bioprospecting, yet many remain taxonomically understudied or undescribed. Filling these knowledge gaps is essential for conserving species and their habitats, and for promoting the sustainable use of biological resources with economic and pharmaceutical potential.</p>
-                <p><strong>Main objectives:</strong></p>
-                <ul>
-                    <li>Conduct taxonomic revisions of Verbenaceae genera in need of updated circumscriptions in light of new molecular and morphological data</li>
-                    <li>Perform species delimitation studies integrating morphological, molecular, and geographic evidence</li>
-                    <li>Provide morphological descriptions, nomenclatural updates, typifications, and identification keys for revised groups</li>
-                    <li>Generate updated distribution maps and preliminary conservation assessments following IUCN criteria</li>
-                    <li>Document threatened or neglected species and contribute to national and international conservation lists</li>
-                </ul>
+            <div class="grid">
+                <div class="card">
+                    <h3>Verbenaceae Phylogenomics and Systematics</h3>
+                    <p>With the advance of high-throughput sequencing approaches, revisiting the relationships within the family using nuclear markers has become essential for a better understanding of its evolution, classification, and conservation.</p>
+                    <p><strong>Main objectives:</strong></p>
+                    <ul>
+                        <li>Construct a robust nuclear phylogenomic backbone for Verbenaceae using target enrichment data (Angiosperms353 probe set) with comprehensive tribal and generic sampling</li>
+                        <li>Revise the infrafamilial tribal classification of Verbenaceae to accommodate findings based on nuclear phylogenies</li>
+                        <li>Perform taxonomic revisions within tribes and genera to resolve relationships that remain ambiguous under plastid-based topologies</li>
+                        <li>Investigate cytonuclear discordance and its implications for the evolutionary history of the family</li>
+                    </ul>
+                    <p>This phylogenomic framework constitutes the foundation for all downstream projects on biogeography, diversification, and trait evolution in Verbenaceae.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Spatio-temporal Evolution and Diversification</h3>
+                    <p>Little is known about the spatio-temporal evolution of Verbenaceae. Previous biogeographic work has suggested a South American origin for the family and its major clades, but these hypotheses have not been tested with model-based ancestral area reconstruction approaches or with well-resolved, dated phylogenies. The drivers of diversification across the family's lineages — including the influence of morphological traits, climatic events, and geographic distribution — also remain largely unexplored.</p>
+                    <p><strong>Main objectives:</strong></p>
+                    <ul>
+                        <li>Estimate divergence times within Verbenaceae for the first time using molecular dating methods</li>
+                        <li>Reconstruct the historical biogeography of the family using model-based ancestral area reconstruction with operationally defined areas across the Neotropics and beyond</li>
+                        <li>Test the hypothesis of a South American origin for the family and its major clades</li>
+                        <li>Perform diversification analyses to identify shifts in speciation and extinction rates across lineages</li>
+                        <li>Investigate the influence of morphological characters, climatic events, and geographic barriers on diversification dynamics within the family</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Taxonomy and Biodiversity Conservation</h3>
+                    <p>Taxonomy is the science that recognizes and delimits species, and it is indispensable for any biological study — scientific names are the entry point to accumulated knowledge about organisms, their ecology, distribution, and conservation status. Taxonomic revisions update our understanding of species boundaries through a thorough review of all available evidence, proposing new classifications and accommodating new findings generated by molecular and morphological studies. Conservation of species and taxonomy are deeply interconnected: it is necessary to know and recognize a species before it can be protected.</p>
+                    <p>Verbenaceae includes numerous species with restricted distributions and high potential for bioprospecting, yet many remain taxonomically understudied or undescribed. Filling these knowledge gaps is essential for conserving species and their habitats, and for promoting the sustainable use of biological resources with economic and pharmaceutical potential.</p>
+                    <p><strong>Main objectives:</strong></p>
+                    <ul>
+                        <li>Conduct taxonomic revisions of Verbenaceae genera in need of updated circumscriptions in light of new molecular and morphological data</li>
+                        <li>Perform species delimitation studies integrating morphological, molecular, and geographic evidence</li>
+                        <li>Provide morphological descriptions, nomenclatural updates, typifications, and identification keys for revised groups</li>
+                        <li>Generate updated distribution maps and preliminary conservation assessments following IUCN criteria</li>
+                        <li>Document threatened or neglected species and contribute to national and international conservation lists</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div lang="pt">
+            <h2>PROJETOS</h2>
+            <p>Compreender os processos que moldam a diversificação das espécies é uma das questões centrais da biologia evolutiva. Estudos filogenéticos combinados com dados genômicos, morfológicos, ecológicos e geográficos permitem testar hipóteses macroevolutivas, fornecendo informações essenciais para a conservação da biodiversidade. As tecnologias de sequenciamento de DNA de alto desempenho (HTS, do inglês <em>high-throughput sequencing</em>) oferecem grande potencial para estudos evolutivos, permitindo o sequenciamento eficiente de milhares de pares de bases e ampliando nossa capacidade de responder a questões fundamentais sobre a biodiversidade. Nossa pesquisa utiliza Verbenaceae (Lamiales) como principal sistema modelo para investigar como fatores bióticos e abióticos moldaram a diversificação das linhagens de plantas neotropicais, combinando filogenômica nuclear, biogeografia histórica, análises de diversificação e taxonomia integrativa.</p>
+
+            <h3>POR QUE VERBENACEAE?</h3>
+            <p>Verbenaceae (Lamiales) compreende 34 gêneros e aproximadamente 800 espécies, distribuídas principalmente no Novo Mundo, com alguns representantes na África e nas margens do Oceano Índico. A família inclui espécies de importância econômica, utilizadas como condimentos, ornamentais, fármacos, chás e cosméticos, e ocupa uma notável diversidade de hábitats.</p>
+            <p>Verbenaceae ocorre em diferentes ecorregiões do Neotrópico, de matagais xéricos e florestas nebulares a florestas úmidas neotropicais, o que a torna um modelo excelente para estudar padrões biogeográficos e o papel de fatores bióticos e abióticos na diversificação de plantas. Apesar de sua relevância ecológica e econômica, Verbenaceae permanece muito sub-representada em estudos genômicos, e um grande número de questões taxonômicas continua sem resolução à luz de dados genômicos nucleares.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Filogenômica e Sistemática de Verbenaceae</h3>
+                    <p>Com o avanço das abordagens de sequenciamento de alto desempenho, revisitar as relações dentro da família utilizando marcadores nucleares tornou-se essencial para uma melhor compreensão de sua evolução, classificação e conservação.</p>
+                    <p><strong>Principais objetivos:</strong></p>
+                    <ul>
+                        <li>Construir uma base filogenômica nuclear robusta para Verbenaceae, utilizando dados de captura de alvos (<em>target enrichment</em>; conjunto de sondas Angiosperms353) com amostragem abrangente de tribos e gêneros</li>
+                        <li>Revisar a classificação tribal infrafamiliar de Verbenaceae para acomodar os resultados das filogenias nucleares</li>
+                        <li>Realizar revisões taxonômicas em tribos e gêneros para resolver relações que permanecem ambíguas nas topologias baseadas em dados plastidiais</li>
+                        <li>Investigar a discordância citonuclear e suas implicações para a história evolutiva da família</li>
+                    </ul>
+                    <p>Esse arcabouço filogenômico constitui a base de todos os projetos subsequentes sobre biogeografia, diversificação e evolução de caracteres em Verbenaceae.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Evolução Espaço-Temporal e Diversificação</h3>
+                    <p>Pouco se sabe sobre a evolução espaço-temporal de Verbenaceae. Trabalhos biogeográficos anteriores sugeriram uma origem sul-americana para a família e seus principais clados, mas essas hipóteses não foram testadas com abordagens de reconstrução de áreas ancestrais baseadas em modelos, nem com filogenias bem resolvidas e datadas. Os fatores que impulsionaram a diversificação nas linhagens da família, incluindo a influência de caracteres morfológicos, eventos climáticos e distribuição geográfica, também permanecem em grande parte inexplorados.</p>
+                    <p><strong>Principais objetivos:</strong></p>
+                    <ul>
+                        <li>Estimar, pela primeira vez, os tempos de divergência dentro de Verbenaceae por meio de métodos de datação molecular</li>
+                        <li>Reconstruir a biogeografia histórica da família utilizando reconstrução de áreas ancestrais baseada em modelos, com áreas definidas operacionalmente no Neotrópico e além</li>
+                        <li>Testar a hipótese de origem sul-americana para a família e seus principais clados</li>
+                        <li>Realizar análises de diversificação para identificar mudanças nas taxas de especiação e extinção entre as linhagens</li>
+                        <li>Investigar a influência de caracteres morfológicos, eventos climáticos e barreiras geográficas na dinâmica de diversificação da família</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Taxonomia e Conservação da Biodiversidade</h3>
+                    <p>A taxonomia é a ciência que reconhece e delimita espécies, sendo indispensável para qualquer estudo biológico: os nomes científicos são a porta de entrada para o conhecimento acumulado sobre os organismos, sua ecologia, distribuição e estado de conservação. As revisões taxonômicas atualizam nosso entendimento sobre os limites das espécies por meio de uma análise criteriosa de todas as evidências disponíveis, propondo novas classificações e incorporando as descobertas geradas por estudos moleculares e morfológicos. A conservação das espécies e a taxonomia estão profundamente interligadas: é necessário conhecer e reconhecer uma espécie antes que ela possa ser protegida.</p>
+                    <p>Verbenaceae inclui numerosas espécies com distribuição restrita e alto potencial para bioprospecção, mas muitas permanecem pouco estudadas do ponto de vista taxonômico ou ainda não foram descritas. Preencher essas lacunas de conhecimento é essencial para conservar as espécies e seus hábitats e para promover o uso sustentável de recursos biológicos com potencial econômico e farmacêutico.</p>
+                    <p><strong>Principais objetivos:</strong></p>
+                    <ul>
+                        <li>Conduzir revisões taxonômicas de gêneros de Verbenaceae que necessitam de circunscrições atualizadas à luz de novos dados moleculares e morfológicos</li>
+                        <li>Realizar estudos de delimitação de espécies integrando evidências morfológicas, moleculares e geográficas</li>
+                        <li>Fornecer descrições morfológicas, atualizações nomenclaturais, tipificações e chaves de identificação para os grupos revisados</li>
+                        <li>Gerar mapas de distribuição atualizados e avaliações preliminares do estado de conservação segundo os critérios da IUCN</li>
+                        <li>Documentar espécies ameaçadas ou negligenciadas e contribuir para listas de conservação nacionais e internacionais</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Banner separador 2 -->
-    <div class="parallax-banner banner-2"></div>
+    <div class="parallax-banner banner-2" role="img" aria-label="Verbenaceae"></div>
 
+    <!-- PEOPLE -->
     <section id="people">
-        <h2>PEOPLE</h2>
-        <p>Our laboratory is committed to training the next generation of plant systematists, taxonomists, and evolutionary biologists in South America and beyond. We welcome students and researchers at all career stages who share a passion for plant diversity and evolution.</p>
-        
+        <h2><span lang="en">PEOPLE</span><span lang="pt">EQUIPE</span></h2>
+        <p lang="en">Our laboratory is committed to training the next generation of plant systematists, taxonomists, and evolutionary biologists in South America and beyond. We welcome students and researchers at all career stages who share a passion for plant diversity and evolution.</p>
+        <p lang="pt">Nosso laboratório está comprometido com a formação da próxima geração de sistematas, taxonomistas e biólogos evolutivos de plantas na América do Sul e além. Recebemos estudantes e pesquisadores em todas as etapas da carreira que compartilhem a paixão pela diversidade e pela evolução das plantas.</p>
+
         <div class="grid">
-            <div class="card" style="text-align: center;">
-                <!-- Inserindo a foto da pesquisadora -->
-                <img src="images/veronica.jpg" alt="Verônica Aydos Thode, PhD" class="profile-pic" style="height: 400px; width: auto; max-width: 100%; object-fit: contain; margin-right: 15px; border-radius: 50%;">
-                <h3 style="color: var(--terracotta); margin-top: 0;">Principal Investigator</h3>
-                <p style="text-align: left;">I am a Professor in the Department of Botany at the Universidade Federal do Rio Grande do Sul (UFRGS), Brazil, where I also supervise graduate students in the Programa de Pós-Graduação em Botânica. My research focuses on plant systematics, taxonomy, molecular phylogenetics, phylogenomics, plastome evolution, historical biogeography, and the diversification of Neotropical plant lineages, with a particular emphasis on the family Verbenaceae (Lamiales).</p>
+            <div class="card pi-card">
+                <img src="images/veronica.jpg" alt="Verônica Aydos Thode, PhD" class="profile-pic">
+                <div>
+                    <h3 class="role"><span lang="en">Principal Investigator</span><span lang="pt">Coordenação</span></h3>
+                    <p class="person-name">Verônica Aydos Thode, PhD</p>
+                    <p lang="en">I am a Professor in the Department of Botany at the Universidade Federal do Rio Grande do Sul (UFRGS), Brazil, where I also supervise graduate students in the Programa de Pós-Graduação em Botânica. My research focuses on plant systematics, taxonomy, molecular phylogenetics, phylogenomics, plastome evolution, historical biogeography, and the diversification of Neotropical plant lineages, with a particular emphasis on the family Verbenaceae (Lamiales).</p>
+                    <p lang="pt">Sou professora do Departamento de Botânica da Universidade Federal do Rio Grande do Sul (UFRGS), Brasil, onde também oriento estudantes de pós-graduação no Programa de Pós-Graduação em Botânica. Minha pesquisa tem como foco a sistemática de plantas, a taxonomia, a filogenética molecular, a filogenômica, a evolução de plastomas, a biogeografia histórica e a diversificação de linhagens de plantas neotropicais, com ênfase particular na família Verbenaceae (Lamiales).</p>
+                </div>
             </div>
-            
+
             <div class="card">
-                <h3>GRADUATE STUDENTS</h3>
-                <p><strong>Laura Luz Nunes</strong> 2022-2025<br>
-                Master's student, Botany (Programa de Pós-Graduação em Botânica - UFRGS)<br>
-                Project: Taxonomic revision and conservation of Glechon Spreng. (Lamiaceae, Mentheae)<br>
-                Projeto: Revisão taxonômica e conservação do gênero Glechon Spreng. (Lamiaceae, Mentheae)</p>
+                <h3><span lang="en">GRADUATE STUDENTS</span><span lang="pt">PÓS-GRADUAÇÃO</span></h3>
+                <div class="person">
+                    <p class="person-name">Laura Luz Nunes <span class="years">2022–2025</span></p>
+                    <p lang="en">Master's student, Botany (Programa de Pós-Graduação em Botânica – UFRGS)<br>
+                    Project: Taxonomic revision and conservation of <em>Glechon</em> Spreng. (Lamiaceae, Mentheae)</p>
+                    <p lang="pt">Mestranda em Botânica (Programa de Pós-Graduação em Botânica – UFRGS)<br>
+                    Projeto: Revisão taxonômica e conservação do gênero <em>Glechon</em> Spreng. (Lamiaceae, Mentheae)</p>
+                </div>
             </div>
-            
+
             <div class="card">
-                <h3>UNDERGRADUATE STUDENTS</h3>
-                <p><strong>Filipe Backes Zatta</strong> 2026 - atual<br>
-                Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
-                Project: Verbena (Verbenaceae) phylogenomics and historical biogeography<br>
-                Projeto: Análises filogenômicas e biogeográficas do gênero Verbena (Verbenaceae)</p>
-                <hr>
-                <p><strong>Sol da Prá</strong> 2026 - atual<br>
-                Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
-                Project: Verbenaceae phylogenomics: implications on the classification of the Tribe Verbenaeae<br>
-                Projeto: Filogenômica de Verbenaceae: implicações para a classificação da Tribo Verbeneae</p>
-                <hr>
-                <p><strong>Italo Angelo Sguaisser Rech</strong> 2024-2026<br>
-                Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
-                Project: Data mining - using available DNA sequences for Verbenaceae (Lamiales) phylogenomic studies<br>
-                Undergraduate Thesis: The chloroplast genome of Petrea volubilis and Verbenaceae (Lamiales) comparative plastomics<br>
-                Projeto: Data mining - Utilização de sequências de DNA já disponíveis para estudos filogenômicos de Verbenaceae (Lamiales)<br>
-                Trabalho de conclusão de curso (TCC): O genoma do cloroplasto de Petrea volubilis e plastômica comparativa da família Verbenaceae (Lamiales)</p>
-                <hr>
-                <p><strong>Bruno dos Santos Prates</strong> 2022-2024<br>
-                Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
-                Project: Verbenaceae (Lamilaes) phylogenomics and preliminary conservation status assessments<br>
-                Projeto: Filogenômica de Verbenaceae (Lamiales) e análise de espécies raras na família</p>
+                <h3><span lang="en">UNDERGRADUATE STUDENTS</span><span lang="pt">GRADUAÇÃO</span></h3>
+                <div class="person">
+                    <p class="person-name">Filipe Backes Zatta <span class="years"><span lang="en">2026–present</span><span lang="pt">2026–atual</span></span></p>
+                    <p lang="en">Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
+                    Project: <em>Verbena</em> (Verbenaceae) phylogenomics and historical biogeography</p>
+                    <p lang="pt">Graduando em Ciências Biológicas (Universidade Federal do Rio Grande do Sul, Brasil)<br>
+                    Projeto: Análises filogenômicas e biogeográficas do gênero <em>Verbena</em> (Verbenaceae)</p>
+                </div>
+                <div class="person">
+                    <p class="person-name">Sol da Prá <span class="years"><span lang="en">2026–present</span><span lang="pt">2026–atual</span></span></p>
+                    <p lang="en">Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
+                    Project: Verbenaceae phylogenomics: implications on the classification of the Tribe Verbeneae</p>
+                    <p lang="pt">Graduanda em Ciências Biológicas (Universidade Federal do Rio Grande do Sul, Brasil)<br>
+                    Projeto: Filogenômica de Verbenaceae: implicações para a classificação da Tribo Verbeneae</p>
+                </div>
+                <div class="person">
+                    <p class="person-name">Italo Angelo Sguaisser Rech <span class="years">2024–2026</span></p>
+                    <p lang="en">Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
+                    Project: Data mining – using available DNA sequences for Verbenaceae (Lamiales) phylogenomic studies<br>
+                    Undergraduate Thesis: The chloroplast genome of <em>Petrea volubilis</em> and Verbenaceae (Lamiales) comparative plastomics</p>
+                    <p lang="pt">Graduando em Ciências Biológicas (Universidade Federal do Rio Grande do Sul, Brasil)<br>
+                    Projeto: <em>Data mining</em> – Utilização de sequências de DNA já disponíveis para estudos filogenômicos de Verbenaceae (Lamiales)<br>
+                    Trabalho de conclusão de curso (TCC): O genoma do cloroplasto de <em>Petrea volubilis</em> e plastômica comparativa da família Verbenaceae (Lamiales)</p>
+                </div>
+                <div class="person">
+                    <p class="person-name">Bruno dos Santos Prates <span class="years">2022–2024</span></p>
+                    <p lang="en">Undergraduate Student, Biology (Federal University of Rio Grande do Sul, Brazil)<br>
+                    Project: Verbenaceae (Lamiales) phylogenomics and preliminary conservation status assessments</p>
+                    <p lang="pt">Graduando em Ciências Biológicas (Universidade Federal do Rio Grande do Sul, Brasil)<br>
+                    Projeto: Filogenômica de Verbenaceae (Lamiales) e análise de espécies raras na família</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Omitindo publicações e footer por brevidade para manter o foco na adição das imagens; mantenha o restante do seu arquivo index.html igual à resposta anterior do id="publications" para baixo -->
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+        <h2><span lang="en">PUBLICATIONS</span><span lang="pt">PUBLICAÇÕES</span></h2>
+        <p class="profile-links">
+            <a href="https://scholar.google.com.br/citations?user=ClH_xLQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-5829-3318" target="_blank" rel="noopener">ORCID</a>
+            <a href="http://lattes.cnpq.br/4732699177241004" target="_blank" rel="noopener"><span lang="en">Lattes CV</span><span lang="pt">Currículo Lattes</span></a>
+        </p>
+
+        <div class="pubs">
+            <h3>2026</h3>
+            <ul>
+                <li>Giacomin, L., Bräuchler, C., Nunes, L.L., <strong>Thode, V.A.</strong>, Antar, G., &amp; Viana, P. The rediscovery of <em>Glechon hoehneana</em> (Lamiaceae), a threatened species of the Brazilian Atlantic Forest, with notes on typification of the genus. <em>Phytotaxa</em> 755: 282–292.</li>
+                <li>Dani, J., Chauveau, O., <strong>Thode, V.A.</strong>, T., D., &amp; Souza-Chies, T.T. Floral oil evolution under diffuse selection: phylogeny and diversification of <em>Cypella</em> and allied genera. <em>Botanical Journal of the Linnean Society</em>: 1–13.</li>
+                <li>Schroder, T., da Silva, L.N., <strong>Thode, V.A.</strong>, Saarela, J.M., &amp; Souza-Chies, T.T. Biogeographic history and morphological trait influence in the diversification of the subtribe Calothecinae (Poaceae). <em>Journal of Biogeography</em> 53: 1.</li>
+            </ul>
+            <h3>2025</h3>
+            <ul>
+                <li>Beyer, M., <strong>Thode, V.A.</strong>, &amp; Lohmann, L.G. Phylogeny and Biogeography of <em>Stizophyllum</em> (Bignonieae, Bignoniaceae). <em>Systematic Botany</em>.</li>
+                <li>Luz, L., de Loreto Bordignon, S.A., &amp; <strong>Thode, V.</strong> Novelties in <em>Glechon</em> (Lamiaceae): Two new species endemic to Rio Grande do Sul (Brazil). <em>Phytotaxa</em> 697: 265–273.</li>
+            </ul>
+            <h3>2024</h3>
+            <ul>
+                <li>dos Santos, G., <strong>Thode, V.A.</strong>, Mota, M., &amp; Pastore, J.F.B. A new combination in <em>Glandularia</em> (Verbenaceae) from Brazil, with insights on Vellozo's <em>Florae Fluminensis</em>. <em>Kew Bulletin</em>.</li>
+                <li>Kataoka, E.Y., <strong>Thode, V.A.</strong>, &amp; Lohmann, L.G. Combining plastome and Sanger sequencing data to reconstruct the phylogeny of <em>Martinella</em> Baill. (Bignonieae, Bignoniaceae). <em>Botanical Journal of the Linnean Society</em>.</li>
+            </ul>
+            <h3>2023</h3>
+            <ul>
+                <li>O'Leary, N., <strong>Thode, V.A.</strong>, &amp; Olmstead, R.G. Making Lantaneae (Verbenaceae) taxonomy useful: a phylogenetic classification. <em>Taxon</em>: 1–18.</li>
+                <li>Frazão, A., <strong>Thode, V.A.</strong>, &amp; Lohmann, L.G. Comparative chloroplast genomics and insights into the molecular evolution of <em>Tanaecium</em> (Bignonieae, Bignoniaceae). <em>Scientific Reports</em> 13: 12469.</li>
+            </ul>
+            <h3>2022</h3>
+            <ul>
+                <li>Calió, M.F., <strong>Thode, V.A.</strong>, Bacon, C.D., Silvestro, D., Antonelli, A., &amp; Lohmann, L.G. Spatiotemporal evolution of the catuaba clade in the Neotropics: morphological shifts correlate with habitat transitions. <em>Journal of Biogeography</em>: 1–13.</li>
+                <li>Fonseca, L.H.M., Nazareno, A.G., <strong>Thode, V.A.</strong>, Zuntini, A.R., &amp; Lohmann, L.G. Putting small and big pieces together: a genome assembly approach reveals the largest Lamiid plastome in a woody vine. <em>PeerJ</em> 10: e13207.</li>
+            </ul>
+            <h3>2021</h3>
+            <ul>
+                <li>Lu-Irving, P., Bedoya, A.M., Salimena, F.R.G., Santos Silva, T.R., Viccini, L.F., Bitencourt, C., <strong>Thode, V.A.</strong>, Cardoso, P.H., O'Leary, N., &amp; Olmstead, R.G. Phylogeny of <em>Lantana</em>, <em>Lippia</em>, and related genera (Lantaneae: Verbenaceae). <em>American Journal of Botany</em> 108: 1–20.</li>
+                <li><strong>Thode, V.A.</strong>, Oliveira, C.T., Loeuille, B., Siniscalchi, C.M., &amp; Pirani, J.R. Comparative analyses of <em>Mikania</em> (Asteraceae: Eupatorieae) plastomes and impact of data partitioning and inference methods on phylogenetic relationships. <em>Scientific Reports</em> 11: 13267.</li>
+                <li><strong>Thode, V.A.</strong>, Dellanhese Inácio, C., Eggers, L., Reginato, M., &amp; Souza-Chies, T.T. Spatial-temporal evolution and diversification in <em>Sisyrinchium</em> (Iridaceae) with emphasis on abiotic drivers. <em>Botanical Journal of the Linnean Society</em>.</li>
+                <li>Cardoso, P.H., O'Leary, N., Olmstead, R.G., Moroni, P., &amp; <strong>Thode, V.A.</strong> An update of the Verbenaceae genera and species numbers. <em>Plant Ecology and Evolution</em> 154: 80–86.</li>
+                <li>Loeuille, B., <strong>Thode, V.</strong>, Siniscalchi, C., Andrade, S., Rossi, M., &amp; Pirani, J.R. Extremely low nucleotide diversity among thirty-six new chloroplast genome sequences from <em>Aldama</em> (Heliantheae, Asteraceae). <em>PeerJ</em> 9: e10886.</li>
+            </ul>
+            <h3>2020</h3>
+            <ul>
+                <li><strong>Thode, V.A.</strong>, Lohmann, L.G., &amp; Sanmartín, I. Evaluating character partitioning and molecular models in plastid phylogenomics at low taxonomic levels: a case study using Bignonieae (Bignoniaceae). <em>Journal of Systematics and Evolution</em> 58: 1071–1089.</li>
+                <li>Cardoso, P.H., Santana, I.N., <strong>Thode, V.A.</strong>, Silva, T.R.S., &amp; Salimena, F.R.G. Nomenclatural novelties in Brazilian Verbenaceae. <em>Phytotaxa</em> 459: 291–295.</li>
+            </ul>
+            <h3>2019</h3>
+            <ul>
+                <li><strong>Thode, V.A.</strong>, Sanmartín, I., &amp; Lohmann, L.G. Contrasting patterns of diversification between Amazonian and Atlantic forest clades of Neotropical lianas (<em>Amphilophium</em>, Bignonieae) inferred from plastid genomic data. <em>Molecular Phylogenetics and Evolution</em> 133: 92–106.</li>
+                <li><strong>Thode, V.A.</strong>, &amp; Lohmann, L.G. Comparative chloroplast genomics at low taxonomic levels: a case study using <em>Amphilophium</em> (Bignonieae, Bignoniaceae). <em>Frontiers in Plant Science</em> 10: 796.</li>
+                <li><strong>Thode, V.A.</strong>, &amp; Bordignon, S.A.L. Two new species of <em>Glandularia</em> (Verbenaceae) from Rio Grande do Sul and an updated key to the species occurring in Brazil. <em>Phytotaxa</em> 411: 39–48.</li>
+            </ul>
+            <h3>2016</h3>
+            <ul>
+                <li>O'Leary, N., &amp; <strong>Thode, V.A.</strong> The genus <em>Glandularia</em> (Verbenaceae) in Brazil. <em>Annals of the Missouri Botanical Garden</em> 101: 699–749.</li>
+            </ul>
+            <h3>2014</h3>
+            <ul>
+                <li><strong>Thode, V.A.</strong>, Silva-Arias, G.A., Turchetto, C., Segatto, A.L.A., Mader, G., Bonatto, S.L., &amp; Freitas, L.B. Genetic diversity and ecological niche modelling of the restricted <em>Recordia reitzii</em> (Verbenaceae) from southern Brazilian Atlantic forest. <em>Botanical Journal of the Linnean Society</em> 176: 332–348.</li>
+            </ul>
+            <h3>2013</h3>
+            <ul>
+                <li><strong>Thode, V.A.</strong>, Backes, A., Mader, G., Kriedt, R.A., Bonatto, S.L., &amp; Freitas, L.B. Development of microsatellites for <em>Verbenoxylum reitzii</em> (Verbenaceae), a tree endemic to the Brazilian Atlantic Rainforest. <em>Applications in Plant Sciences</em> 1: 1300005.</li>
+                <li><strong>Thode, V.A.</strong>, O'Leary, N., Olmstead, R.G., &amp; Freitas, L.B. Phylogenetic position of the monotypic genus <em>Verbenoxylum</em> (Verbenaceae) and new combination under <em>Recordia</em>. <em>Systematic Botany</em> 38: 805–817.</li>
+            </ul>
+            <h3>2010</h3>
+            <ul>
+                <li><strong>Thode, V.A.</strong>, &amp; Mentz, L.A. O gênero <em>Glandularia</em> J.F. Gmel. (Verbenaceae) no Rio Grande do Sul, Brasil. <em>Acta Botanica Brasílica</em> 24: 529–557.</li>
+                <li>Peralta, P., &amp; <strong>Thode, V.A.</strong> Una nueva especie, un nuevo status y nuevas combinaciones en <em>Glandularia</em> (Verbenaceae) para el Sur de Brasil. <em>Rodriguesia</em> 61: S29–S32.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2><span lang="en">CONTACT</span><span lang="pt">CONTATO</span></h2>
+        <p lang="en">We welcome graduate students, postdoctoral researchers, and collaborators interested in plant systematics, phylogenomics, historical biogeography, and Neotropical plant diversity.</p>
+        <p lang="pt">Recebemos estudantes de pós-graduação, pós-doutorandos e colaboradores interessados em sistemática vegetal, filogenômica, biogeografia histórica e diversidade de plantas neotropicais.</p>
+
+        <div class="grid contact-grid">
+            <div class="card">
+                <p class="person-name">Verônica Aydos Thode, PhD</p>
+                <p><span lang="en">Assistant Professor</span><span lang="pt">Professora</span><br>
+                Universidade Federal do Rio Grande do Sul (UFRGS)<br>
+                Av. Bento Gonçalves, 9500 – <span lang="en">Building</span><span lang="pt">Prédio</span> 43432, <span lang="en">room</span><span lang="pt">sala</span> 224<br>
+                <a href="https://www.ufrgs.br/ppgbotanica/" target="_blank" rel="noopener">Programa de Pós-Graduação em Botânica UFRGS</a><br>
+                Email: <a href="mailto:veronica.thode@ufrgs.br">veronica.thode@ufrgs.br</a></p>
+            </div>
+            <div class="card">
+                <h3>CV</h3>
+                <ul class="link-list">
+                    <li><a href="https://scholar.google.com.br/citations?user=ClH_xLQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><a href="https://orcid.org/0000-0001-5829-3318" target="_blank" rel="noopener">ORCID</a></li>
+                    <li><a href="http://lattes.cnpq.br/4732699177241004" target="_blank" rel="noopener"><span lang="en">Lattes CV</span><span lang="pt">Currículo Lattes</span></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Veronica-Thode" target="_blank" rel="noopener">ResearchGate</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="images/evoflora_logo.svg" alt="" class="footer-logo">
+        <p lang="en">EVOFLORA – Research Group on Evolution, Systematics, and Biogeography of Flora<br>Department of Botany · Universidade Federal do Rio Grande do Sul (UFRGS)</p>
+        <p lang="pt">EVOFLORA – Núcleo de Pesquisa em Evolução, Sistemática e Biogeografia da Flora<br>Departamento de Botânica · Universidade Federal do Rio Grande do Sul (UFRGS)</p>
+        <p class="updated"><span lang="en">Last updated: August 2026</span><span lang="pt">Última atualização: agosto de 2026</span></p>
+    </footer>
+
+    <script>
+        // Language switch (EN/PT). Remembers the choice in this browser; also accepts ?lang=pt in the URL.
+        (function () {
+            var body = document.body;
+            function setLang(lang) {
+                body.classList.remove('lang-en', 'lang-pt');
+                body.classList.add('lang-' + lang);
+                document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+                document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+                    b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+                });
+                try { localStorage.setItem('evoflora-lang', lang); } catch (e) {}
+            }
+            var initial = 'en';
+            try {
+                var q = new URLSearchParams(location.search).get('lang');
+                var saved = localStorage.getItem('evoflora-lang');
+                initial = q || saved || ((navigator.language || '').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
+            } catch (e) {}
+            setLang(initial === 'pt' ? 'pt' : 'en');
+            document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+                b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); });
+            });
+        })();
+    </script>
+</body>
+</html>
